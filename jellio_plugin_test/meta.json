@@ -1,0 +1,12 @@
+{
+    "category": "General",
+    "changelog": "**Full Changelog**: https://github.com/InfiniteAvenger/jellio/commits/v0.2.0",
+    "description": "This plugin provides integration between Jellyfin and the Jellio service.\nCommunity-maintained fork with Jellyfin 10.11.x support.\n",
+    "guid": "e874be83-fe36-4568-abac-f5ce0574b409",
+    "name": "Jellio",
+    "overview": "Integrates Jellio features with Jellyfin.",
+    "owner": "InfiniteAvenger",
+    "targetAbi": "10.11.0.0",
+    "timestamp": "2025-11-06T01:19:24Z",
+    "version": "0.2.0.0"
+}

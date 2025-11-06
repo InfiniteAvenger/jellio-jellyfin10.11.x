@@ -21,6 +21,7 @@ public class WebController(
 {
     private readonly Assembly _executingAssembly = Assembly.GetExecutingAssembly();
 
+    [AllowAnonymous]
     [HttpGet]
     [HttpGet("configure")]
     [HttpGet("{config?}/configure")]
