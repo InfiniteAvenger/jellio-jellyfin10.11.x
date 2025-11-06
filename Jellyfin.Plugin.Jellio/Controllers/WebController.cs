@@ -1,3 +1,4 @@
+using System;
 using System.Net.Mime;
 using System.Reflection;
 using Jellyfin.Plugin.Jellio.Helpers;
