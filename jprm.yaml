@@ -1,10 +1,11 @@
 name: "Jellio"
 guid: "e874be83-fe36-4568-abac-f5ce0574b409"
-targetAbi: "10.10.0.0"
+targetAbi: "10.11.0.0"
 overview: "Integrates Jellio features with Jellyfin."
 description: |
   This plugin provides integration between Jellyfin and the Jellio service.
+  Community-maintained fork with Jellyfin 10.11.x support.
 category: "General"
-owner: "vanchaxy"
+owner: "InfiniteAvenger"
 artifacts:
   - "Jellyfin.Plugin.Jellio.dll"
