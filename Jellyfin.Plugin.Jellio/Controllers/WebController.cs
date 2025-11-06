@@ -61,29 +61,25 @@ public class WebController : ControllerBase
     public IActionResult GetServerInfo()
     {
         // Try claims principal first (cookie/session auth)
-        var user = RequestHelpers.GetCurrentUser(User, _userManager);
+        var userId = RequestHelpers.GetCurrentUserId(User);
 
         // Fallback: try token-based auth from headers
-        if (user == null)
+        if (userId == null)
         {
             var token = ExtractTokenFromHeaders(Request);
             if (!string.IsNullOrEmpty(token))
             {
-                var userId = RequestHelpers.GetUserIdByAuthToken(token!, _deviceManager);
-                if (userId.HasValue)
-                {
-                    user = _userManager.GetUserById(userId.Value);
-                }
+                userId = RequestHelpers.GetUserIdByAuthToken(token!, _deviceManager);
             }
         }
 
-        if (user == null)
+        if (userId == null)
         {
             return Unauthorized();
         }
 
         var friendlyName = _serverApplicationHost.FriendlyName;
-        var libraries = LibraryHelper.GetUserLibraries(user, _userViewManager, _dtoService);
+        var libraries = LibraryHelper.GetUserLibraries(userId.Value, _userManager, _userViewManager, _dtoService);
 
         return Ok(new { name = friendlyName, libraries });
     }

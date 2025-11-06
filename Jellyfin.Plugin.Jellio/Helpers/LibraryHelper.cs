@@ -1,7 +1,6 @@
 using System;
 using Jellyfin.Data.Enums;
 using MediaBrowser.Controller.Dto;
-using MediaBrowser.Controller.Entities;
 using MediaBrowser.Controller.Library;
 using MediaBrowser.Model.Dto;
 using MediaBrowser.Model.Library;
@@ -18,16 +17,11 @@ public static class LibraryHelper
             return Array.Empty<BaseItemDto>();
         }
 
-        return GetUserLibraries(user, userViewManager, dtoService);
-    }
-
-    internal static BaseItemDto[] GetUserLibraries(User user, IUserViewManager userViewManager, IDtoService dtoService)
-    {
-        var query = new UserViewQuery { User = user };
+        var query = new UserViewQuery { UserId = userId };
         var folders = userViewManager.GetUserViews(query);
 
         var dtoOptions = new DtoOptions(false);
-        var dtos = Array.ConvertAll(folders, i => dtoService.GetBaseItemDto(i, dtoOptions));
+        var dtos = Array.ConvertAll(folders, i => dtoService.GetBaseItemDto(i, dtoOptions, user));
         return Array.FindAll(
             dtos,
             dto =>
