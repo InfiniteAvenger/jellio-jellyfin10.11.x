@@ -9,11 +9,11 @@
         "versions": [
             {
                 "version": "1.2.0.0",
-                "changelog": "",
+                "changelog": "**Full Changelog**: https://github.com/InfiniteAvenger/jellio-jellyfin10.11.x/compare/v1.1.0...v1.2.0",
                 "targetAbi": "10.11.0.0",
                 "sourceUrl": "https://github.com/InfiniteAvenger/jellio-jellyfin10.11.x/releases/download/v1.2.0/jellio_1.2.0.0.zip",
-                "checksum": "855292886d1cc7c056eb36f84b5d2c94",
-                "timestamp": "2025-11-07T01:34:11Z"
+                "checksum": "a189fd11c78ac516da200053352ce996",
+                "timestamp": "2025-11-07T02:15:11Z"
             },
             {
                 "version": "1.1.0.0",
