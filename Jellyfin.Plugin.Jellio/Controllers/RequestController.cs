@@ -53,20 +53,20 @@ public class RequestController : ControllerBase
         [FromQuery] int? episode
     )
     {
-        if (config is null)
-        {
-            return BadRequest("Invalid or missing configuration.");
-        }
-
-        if (!config.JellyseerrEnabled || string.IsNullOrWhiteSpace(config.JellyseerrUrl))
-        {
-            return BadRequest("Jellyseerr is not configured.");
-        }
-
-        int? maybeTmdbId = tmdbId;
-
         try
         {
+            if (config is null)
+            {
+                return BadRequest("Invalid or missing configuration.");
+            }
+
+            if (!config.JellyseerrEnabled || string.IsNullOrWhiteSpace(config.JellyseerrUrl))
+            {
+                return BadRequest("Jellyseerr is not configured.");
+            }
+
+            int? maybeTmdbId = tmdbId;
+
             using var client = CreateHttpClient(config.JellyseerrUrl!, config.JellyseerrApiKey);
 
             // Resolve TMDB ID via Jellyseerr search if not provided
@@ -133,9 +133,9 @@ public class RequestController : ControllerBase
 
             return Problem($"Jellyseerr request failed with status {(int)createResp.StatusCode}.", statusCode: 502);
         }
-        catch
+        catch (Exception ex)
         {
-            return Problem("Could not reach Jellyseerr.", statusCode: 502);
+            return Problem($"Error creating Jellyseerr request: {ex.Message}", statusCode: 500);
         }
     }
 }
