@@ -8,6 +8,14 @@
         "category": "General",
         "versions": [
             {
+                "version": "1.1.7.0",
+                "changelog": "**Full Changelog**: https://github.com/InfiniteAvenger/jellio-jellyfin10.11.x/compare/v1.1.6...v1.1.7",
+                "targetAbi": "10.11.0.0",
+                "sourceUrl": "https://github.com/InfiniteAvenger/jellio-jellyfin10.11.x/releases/download/v1.1.7/jellio_1.1.7.0.zip",
+                "checksum": "11c4b67347fc06460e8add1217ab0340",
+                "timestamp": "2025-11-08T02:43:33Z"
+            },
+            {
                 "version": "1.0.0.0",
                 "changelog": "Jellio v1.0.0 - Official Release. First stable release with Jellyfin 10.11.x + .NET 9 support, robust authentication, multi-library selection, web configuration UI, and direct streaming to Stremio.",
                 "targetAbi": "10.11.0.0",
