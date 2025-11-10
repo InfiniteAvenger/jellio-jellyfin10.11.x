@@ -9,11 +9,11 @@
         "versions": [
             {
                 "version": "1.2.0.0",
-                "changelog": "In this release, I simply updated the formatting of some things and simplified everything for a better user experience. Enjoy!",
+                "changelog": "For this release, I updated multiple simple GUI things and added some extra polish. Enjoy!",
                 "targetAbi": "10.11.0.0",
                 "sourceUrl": "https://github.com/InfiniteAvenger/jellio-plus/releases/download/v1.2.0/jellio_1.2.0.0.zip",
-                "checksum": "fe3d845ebe6a638021775cb9104436ae",
-                "timestamp": "2025-11-10T17:57:30Z"
+                "checksum": "7437956e30e194576c0916c9117a37c0",
+                "timestamp": "2025-11-10T18:22:04Z"
             },
             {
                 "version": "1.1.0.0",
