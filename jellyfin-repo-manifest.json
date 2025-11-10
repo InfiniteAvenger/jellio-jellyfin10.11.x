@@ -8,6 +8,14 @@
         "category": "General",
         "versions": [
             {
+                "version": "1.2.0.0",
+                "changelog": "In this release, I simply updated the formatting of some things and simplified everything for a better user experience. Enjoy!",
+                "targetAbi": "10.11.0.0",
+                "sourceUrl": "https://github.com/InfiniteAvenger/jellio-plus/releases/download/v1.2.0/jellio_1.2.0.0.zip",
+                "checksum": "fe3d845ebe6a638021775cb9104436ae",
+                "timestamp": "2025-11-10T17:57:30Z"
+            },
+            {
                 "version": "1.1.0.0",
                 "changelog": "# Jellio v1.1.0 - Jellyseerr Integration\r\n\r\n## What's New\r\n\r\nAdded Jellyseerr integration! When a stream is unavailable in Stremio, you'll now see a **\"\ud83d\udce5 Request via Jellyseerr\"** option. Click it to automatically request the movie or TV show in Jellyseerr.\r\n\r\n## Configuration\r\n\r\nTo enable this feature:\r\n1. Open the Jellio plugin configuration page\r\n2. Enable \"Jellyseerr Integration\"\r\n3. Enter your Jellyseerr URL (use internal Docker address for Docker setups, e.g., `http://192.168.0.125:5055`)\r\n4. Enter your Jellyseerr API Key (found in Jellyseerr Settings > General > API Key)\r\n5. Click \"Save Configuration to Jellyfin\"\r\n\r\n## Installation\r\n\r\nDownload `jellio_1.1.0.0.zip` and upload it via Jellyfin Admin Dashboard > Plugins > Upload Plugin. Restart Jellyfin after installation.\r\n",
                 "targetAbi": "10.11.0.0",
