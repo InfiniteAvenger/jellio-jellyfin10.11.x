@@ -5,6 +5,7 @@ import { getConfigFromServer } from '@/services/backendService';
 const STORAGE_KEY = 'jellio_config';
 
 interface StoredConfig {
+  libraries?: Array<{ key: string; name: string; type: string }>;
   jellyseerrEnabled?: boolean;
   jellyseerrUrl?: string;
   jellyseerrApiKey?: string;
@@ -22,6 +23,9 @@ export const useConfigStorage = (form: UseFormReturn<any>, accessToken?: string)
           const config: StoredConfig = JSON.parse(stored);
           
           // Update form with stored values
+          if (config.libraries && Array.isArray(config.libraries)) {
+            form.setValue('libraries', config.libraries);
+          }
           if (config.jellyseerrEnabled !== undefined) {
             form.setValue('jellyseerrEnabled', config.jellyseerrEnabled);
           }
@@ -71,6 +75,7 @@ export const useConfigStorage = (form: UseFormReturn<any>, accessToken?: string)
       const stripTrailingSlash = (url: string) => url?.replace(/\/+$/, '') || '';
       
       const config: StoredConfig = {
+        libraries: values.libraries || [],
         jellyseerrEnabled: values.jellyseerrEnabled,
         jellyseerrUrl: stripTrailingSlash(values.jellyseerrUrl),
         jellyseerrApiKey: values.jellyseerrApiKey,
