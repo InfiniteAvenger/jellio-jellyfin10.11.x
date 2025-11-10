@@ -7,11 +7,9 @@
 
 Jellio+ is a modern fork of [Vanchaxy's original Jellio plugin](https://github.com/vanchaxy/jellio), updated and enhanced for **Jellyfin 10.11.x** compatibility. This plugin creates a bridge between your Jellyfin media server and Stremio, allowing you to stream your personal media library directly within the Stremio interface.
 
-[![.NET](https://img.shields.io/badge/.NET-9.0-purple)](https://dotnet.microsoft.com/)
-
 ## Features
 
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)This fork is updated for **Jellyfin 10.11.2**.
+This fork is updated for **Jellyfin 10.11.2**.
 
 - **Full Library Integration** - Access your entire Jellyfin movie and TV show collection in Stremio
 
